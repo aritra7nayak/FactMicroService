@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Pagedlist" Version="1.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FactPanel.DAL\FactPanel.DAL.csproj" />
     <ProjectReference Include="..\FactPanel.Model\FactPanel.Model.csproj" />
     <ProjectReference Include="..\FactPanel.ViewModels\FactPanel.ViewModels.csproj" />

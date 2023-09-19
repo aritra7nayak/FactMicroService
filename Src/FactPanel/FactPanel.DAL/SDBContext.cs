@@ -13,6 +13,10 @@ namespace FactPanel.DAL
     {
         public SDBContext(): base("TestConnection") { }
 
+        public DbSet<StockDelivery> StockDeliveries { get; set; }
+        public DbSet<StockPrice> StockPrices { get; set; }
+        public DbSet<Fact> Facts { get; set; }
+
         public void UpdateAuditables()
         {
 

@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LinqKit" Version="1.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FactPanel.DAL\FactPanel.DAL.csproj" />
     <ProjectReference Include="..\FactPanel.Model\FactPanel.Model.csproj" />
     <ProjectReference Include="..\FactPanel.Repository\FactPanel.Repository.csproj" />
