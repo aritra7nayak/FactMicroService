@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FactPanel.DAL\FactPanel.DAL.csproj" />
+    <ProjectReference Include="..\FactPanel.Model\FactPanel.Model.csproj" />
+  </ItemGroup>
+
+</Project>
