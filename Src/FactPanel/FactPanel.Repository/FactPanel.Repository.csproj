@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="microsoft.Aspnet.Mvc" Version="5.2.9" />
     <PackageReference Include="Pagedlist" Version="1.17.0" />
   </ItemGroup>
 
