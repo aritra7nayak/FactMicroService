@@ -1,0 +1,74 @@
+@model PagedList.IPagedList<FactPanel.Model.StockPrice>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Filter", "Filter")
+</p>
+<p>
+    <b> @Model.TotalItemCount </b> Record(s) Found
+</p>
+@if (Model != null)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().StockId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Date)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.First().Price)
+            </th>
+
+            
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.StockId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br />
+
+    <div id='Paging' style="text-align:center">
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+        of @Model.PageCount
+        @{
+            var filters = (FactPanel.ViewModels.StockPriceFilterViewModel)ViewBag.Filters;
+
+            @Html.PagedListPager(Model, x => { filters.page = x; return CustomUrlHelper.GenerateUrl("StockPrices", "Index", filters); });
+        }
+    </div>
+
+}
