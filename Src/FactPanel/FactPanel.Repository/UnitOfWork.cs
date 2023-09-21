@@ -54,6 +54,34 @@ namespace FactPanel.Repository
             }
         }
 
+        private GenericRepository<Fact> _factRepo;
+
+        public GenericRepository<Fact> FactRepo
+        {
+            get
+            {
+                if (_factRepo == null)
+                {
+                    _factRepo = new GenericRepository<Fact>(_context);
+                }
+                return _factRepo;
+            }
+        }
+
+        private FactRunRepository _factRunRepository;
+
+        public FactRunRepository FactRunRepository
+        {
+            get
+            {
+                if (_factRunRepository == null)
+                {
+                    _factRunRepository = new FactRunRepository(_context);
+                }
+                return _factRunRepository;
+            }
+        }
+
 
         public void Save()
         {

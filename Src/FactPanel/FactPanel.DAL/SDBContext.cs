@@ -17,6 +17,8 @@ namespace FactPanel.DAL
         public DbSet<StockPrice> StockPrices { get; set; }
         public DbSet<Fact> Facts { get; set; }
 
+        public DbSet<FactRun> FactRuns { get; set; }
+
         public void UpdateAuditables()
         {
 
