@@ -196,11 +196,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\StockPrices\Create.cshtml" />
     <Content Include="Views\StockPrices\Index.cshtml" />
+    <Content Include="Views\FactRuns\Create.cshtml" />
+    <Content Include="Views\FactRuns\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\FactRuns\" />
     <Folder Include="Views\Facts\" />
     <Folder Include="Views\StockDeliveries\" />
   </ItemGroup>
