@@ -21,7 +21,7 @@ namespace FactPanel.Controllers
         }
 
         // GET: FactRuns/Filter
-        [Authorize(Roles = "MarketView,Market,Admin")]
+        //[Authorize(Roles = "MarketView,Market,Admin")]
         public ActionResult Filter()
         {
 
@@ -29,7 +29,7 @@ namespace FactPanel.Controllers
         }
 
         // GET: FactRuns
-        [Authorize(Roles = "MarketView,Market,Admin")]
+        //[Authorize(Roles = "MarketView,Market,Admin")]
         public ActionResult Index(FactRunFilterViewModel filters)
         {
             var factRuns = factRunsService.Get(filters.FromDate,
@@ -41,7 +41,7 @@ namespace FactPanel.Controllers
         }
 
         // GET: FactRuns/Details/5
-        [Authorize(Roles = "MarketView,Market,Admin")]
+        //[Authorize(Roles = "MarketView,Market,Admin")]
         public ActionResult Details(int id = 0)
         {
 
@@ -54,7 +54,7 @@ namespace FactPanel.Controllers
         }
 
         // GET: FactRuns/Create
-        [Authorize(Roles = "Market,Admin")]
+        //[Authorize(Roles = "Market,Admin")]
         public ActionResult Create()
         {
 
@@ -66,7 +66,7 @@ namespace FactPanel.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Market,Admin")]
+        //[Authorize(Roles = "Market,Admin")]
         public ActionResult Create(FactRun factRun)
         {
            
@@ -84,7 +84,7 @@ namespace FactPanel.Controllers
         }
 
         // GET: FactRuns/Edit/5
-        [Authorize(Roles = "Market,Admin")]
+        //[Authorize(Roles = "Market,Admin")]
         public ActionResult Edit(int id = 0)
         {
 
@@ -102,7 +102,7 @@ namespace FactPanel.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Market,Admin")]
+        //[Authorize(Roles = "Market,Admin")]
         public ActionResult Edit(FactRun factRun)
         {
             if (ModelState.IsValid)
@@ -118,7 +118,7 @@ namespace FactPanel.Controllers
         }
 
         // GET: FactRuns/Delete/5
-        [Authorize(Roles = "Market,Admin")]
+        //[Authorize(Roles = "Market,Admin")]
         public ActionResult Delete(int id)
         {
 
@@ -133,7 +133,7 @@ namespace FactPanel.Controllers
         // POST: FactRuns/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Market,Admin")]
+        //[Authorize(Roles = "Market,Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             factRunsService.Delete(id, new ModelStateWrapper(this.ModelState));
