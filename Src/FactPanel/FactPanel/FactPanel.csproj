@@ -146,7 +146,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FactRunsController.cs" />
+    <Compile Include="Controllers\FactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StockDeliveriesController.cs" />
     <Compile Include="Controllers\StockPricesController.cs" />
     <Compile Include="CustomUrlHelper.cs" />
     <Compile Include="Global.asax.cs">
@@ -197,6 +200,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\FactRuns\" />
+    <Folder Include="Views\Facts\" />
+    <Folder Include="Views\StockDeliveries\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
